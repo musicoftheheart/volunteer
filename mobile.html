@@ -2,12 +2,14 @@
   <title>Music of the Heart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    /* Move the iframe off-screen initially */
+    /* Hide only the Wix ad banner */
     iframe {
       position: fixed;
-      left: -9999px;
-      width: 1px;
-      height: 1px;
+      left: 0;
+      top: -51px; /* Adjust as needed to hide the banner */
+      width: 100%;
+      height: calc(100% + 51px); /* Adjusted to cover the area hidden by the banner */
+      border: none;
     }
     /* Remove any padding and margin */
     body {
@@ -15,22 +17,6 @@
       padding: 0;
     }
   </style>
-  <script>
-    // Function to hide the iframe
-    function hideIframe() {
-      document.querySelector('iframe').style.left = '-9999px';
-    }
-
-    // Event listener to hide the iframe when the user interacts with the page
-    document.addEventListener('DOMContentLoaded', function() {
-      // Hide the iframe initially
-      hideIframe();
-
-      // Event to hide the iframe when the user interacts with the page (e.g., scrolling)
-      document.addEventListener('scroll', hideIframe);
-      // You can add more event listeners here for other interactions, if needed
-    });
-  </script>
   
   <body>
   
