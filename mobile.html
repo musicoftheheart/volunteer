@@ -1,15 +1,10 @@
 <html>
   <title>Music of the Heart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    /* Hide only the Wix ad banner */
+<style>
+    /* Hide the iframe */
     iframe {
-      position: fixed;
-      left: 0;
-      top: -51px; /* Adjust as needed to hide the banner */
-      width: 100%;
-      height: calc(100% + 51px); /* Adjusted to cover the area hidden by the banner */
-      border: none;
+      display: none;
     }
     /* Remove any padding and margin */
     body {
@@ -17,6 +12,18 @@
       padding: 0;
     }
   </style>
+<script>
+    window.addEventListener('load', function() {
+      // Hide the iframe
+      document.querySelector('iframe').style.display = 'none';
+    });
+
+    // Continuous check to hide iframe (to prevent reappearing)
+    window.addEventListener('scroll', function() {
+      document.querySelector('iframe').style.display = 'none';
+    });
+  </script>
+  
   <body>
   
      <iframe src="https://stringbot.wixsite.com/music-of-the-heart" style="    position: fixed;    left: 0px;    top: -51px;    width: 100%;    height: 108%;}">
