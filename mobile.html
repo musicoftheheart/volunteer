@@ -2,7 +2,7 @@
   <title>Music of the Heart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    /* Move the iframe off-screen */
+    /* Move the iframe off-screen initially */
     iframe {
       position: fixed;
       left: -9999px;
@@ -15,15 +15,20 @@
       padding: 0;
     }
   </style>
-<script>
-    window.addEventListener('load', function() {
-      // Hide the iframe
-      document.querySelector('iframe').style.display = 'none';
-    });
+  <script>
+    // Function to hide the iframe
+    function hideIframe() {
+      document.querySelector('iframe').style.left = '-9999px';
+    }
 
-    // Continuous check to hide iframe (to prevent reappearing)
-    window.addEventListener('scroll', function() {
-      document.querySelector('iframe').style.display = 'none';
+    // Event listener to hide the iframe when the user interacts with the page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Hide the iframe initially
+      hideIframe();
+
+      // Event to hide the iframe when the user interacts with the page (e.g., scrolling)
+      document.addEventListener('scroll', hideIframe);
+      // You can add more event listeners here for other interactions, if needed
     });
   </script>
   
