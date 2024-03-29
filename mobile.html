@@ -2,9 +2,14 @@
   <title>Music of the Heart</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    /* Hide the iframe */
+    /* Hide only the Wix ad banner */
     iframe {
-      display: none;
+      position: fixed;
+      left: 0;
+      top: -51px; /* Adjust as needed to hide the banner */
+      width: 100%;
+      height: calc(100% + 51px); /* Adjusted to cover the area hidden by the banner */
+      border: none;
     }
     /* Remove any padding and margin */
     body {
